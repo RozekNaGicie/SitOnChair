@@ -31,6 +31,7 @@
             flex-direction: row;
             justify-content: space-around;
             font-size: 14px;
+            z-index: 10;
             .navbar-title{
                 width:auto;
                 height: 100%;
@@ -262,7 +263,7 @@
         .product-text{
             background: rgba(255,255,255,0.5);
             width: 100%;
-            height: auto;
+            height: 60px;
             margin-bottom: 15px;
             display: flex;
             flex-direction: column;
@@ -283,15 +284,235 @@
     .products-container:last-child{
         margin-right: 20px;
     }
-    .cont{
-        width:100%;
-        height: 800px; 
-        background: green;
-    }
   }
+// price conteiner
+.price-section-container{
+    margin-top: 70px;
+    background: #f1f1f1;
+.price-title-cont{
+    padding: 10px;
+    border-bottom: 8px solid #24ba9f;
+    display: inline-block;
+    width: 200px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.price-container{
+    width: 100%;
+    height:auto;
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: row;
+    justify-content: space-around;
+  .price-type-1{
+      width:  26%;
+      height: 500px;
+      border: 1px solid  lightgray;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      background: #f9f9f9;
+      opacity: 0.7;
+      cursor: pointer;
+     
+
+      h3{
+          margin-top: 35px;
+          color: #24ba9f;
+      }
+      .price-circle {
+        border: 1px solid black;
+        border-radius: 90px;
+        width: 90px;
+        height: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #f9f9f9;
+        :first-child{
+            font-size: 26px;
+            display: flex;
+            span{
+                display: inline-block;
+                margin-left: 1px;
+            }
+        }
+        :last-child{
+            font-size: 16px;
+            font-weight: bold;
+        }
+      }
+      .price-text{
+          width: 100%;
+          background: #f1f1f1;
+          text-align: center;
+          height: 35px;
+          font-size: 24px;
+          font-weight: 100;
+          p{
+              background: lightgray;
+              height: 35px;
+            //   margin-top: 4px;
+          }
+
+      }
+      #join-button-label{
+          display: block;
+          width:156px;
+          height: auto;
+          background: #f9f9f9;
+          border: 1px solid black;
+          border-radius: 25px;
+          text-align: center;
+          font-size: 26px;
+          color: black;
+          cursor: pointer;
+      }
+  }
+  .price-type-1:hover{
+      background: #24ba9f;
+      opacity: 1;
+      h3{
+          color: #f1f1f1;
+      }
+  }
+  .price-type-1:before{
+      content: "";
+      width: 50px;
+      height: 50px;
+      display: inline-block;
+      position: absolute;
+      border: 1px solid lightgray;
+      border-radius: 90px;
+      top: 995px;
+      z-index: 5;
+      background: #f9f9f9;
+  }
+  .price-type-1:after{
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    // border: 1px solid black;
+    border-radius: 90px;
+    top: 1005px;
+    z-index: 5;
+    background: lightgray;
+}
+
+}
+
+}
+// forms
+.form-section{
+    width: 100%;
+    height: auto;
+    background: white;
+    margin-top: 40px;
+    .title-form-section{
+        width: 200px;
+        height: auto;
+        border-bottom: 8px solid #24ba9f;
+        font-size: 30px;
+        font-weight: bold;
+        margin-left: 40px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        padding: 10px;
+    }
+    .form-container{
+        display:flex;
+        .left-form-container{
+            flex:1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            input{
+                width: 95%;
+                margin: 20px;
+                padding:20px;
+                font-size: 26px;
+                color: lightgray;
+                border: 1px solid #24ba9f;
+            }
+            :last-child{
+                width: 95%;
+                margin: 20px;
+                padding:20px;
+                font-size: 26px;
+                color: lightgray;
+                border: 1px solid #24ba9f;
+            }
+        }
+        .right-form-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            flex:1;
+            .right-form-image{
+                background: url('../images/red_chair.png');
+                background-repeat: no-repeat; 
+                background-position: center;
+                height: 50%;
+                width: 50%;
+            }
+            .right-form-data{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            #personal-data-agree{
+                visibility: hidden;
+            }
+            #personal-data-label{
+                width: 50px;
+                height: 50px;
+                border: 1px solid #24ba9f;
+                background: #ffff;
+                cursor: pointer;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            p{
+                font-size: 18px;
+                margin-left: 10px;
+                color: gray;
+            }
+        }
+        #send-personal-data{
+            visibility: hidden;
+        }  
+        #label-personal-data{
+            width: 50%;
+            height: 50px;
+            // border: 1px solid black;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            background: #24ba9f;
+            color: #fff;
+            font-size: 36px;
+            cursor: pointer;
+        }
+            
+        }
+    }
+}
+
 }
 
 
 .active{
     display: inline-block !important;
+}
+.checked {
+    background-image: url('../images/form_ok.jpg') !important;
 }

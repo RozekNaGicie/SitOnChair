@@ -2,6 +2,8 @@ var dropdown = document.querySelector('.dropdown-menu');
 var link = document.querySelector('.navbar-menu-1');
 var mobileIcon = document.querySelector('.mobile-icon');
 var mobileMenu = document.querySelector('.mobile-links-container');
+var personaData = document.querySelector('#personal-data-label');
+var buttonData = document.querySelector('#personal-data-agree');
 
 
 console.log(link)
@@ -24,4 +26,12 @@ mobileIcon.addEventListener('click', function(){
 
     }
 });
+personaData.addEventListener('click', function(){
+  if(personaData.classList.contains('checked') == false){
+    personaData.classList.add('checked');
+  } else{
+      personaData.classList.remove('checked')
+  }
+});
+console.log(buttonData.value);
 
