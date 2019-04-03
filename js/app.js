@@ -35,3 +35,6 @@ personaData.addEventListener('click', function(){
 });
 console.log(buttonData.value);
 
+
+
+
