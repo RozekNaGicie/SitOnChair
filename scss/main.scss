@@ -76,10 +76,10 @@
                         list-style-type: none;
                         text-decoration: none;
                         width: 110px;
-                        height: 93px;
+                        height: 96px;
                         background: black;
                         position: fixed;
-                        top: 50px;
+                        top: 47px;
                         text-align: center;
                         display: none;
 
@@ -97,7 +97,7 @@
                         background: black;
                         position: relative;
                         transform: rotate(45deg);
-                        right: -50px;
+                        right: -46.5px;
                         top: -5px;
                     }
                 }
@@ -136,7 +136,7 @@
             flex-direction: row;
             align-items: center;
 
-            .slider-box-image {
+            .slider-box--blackChair {
                 background: url('../images/black_chair.png');
                 background-repeat: no-repeat;
                 background-position: left;
@@ -147,7 +147,18 @@
                 transform: scale(1.20);
             }
 
-            .slider-box-image:before {
+            .slider-box--redChair {
+                background: url('../images/red_chair.png');
+                background-repeat: no-repeat;
+                background-position: left;
+                width: 100%;
+                height: 100%;
+                flex: 1.5;
+                margin-left: 100px;
+                transform: scale(1.20);
+            }
+
+            .arrow-left {
                 content: "";
                 width: 40px;
                 height: 40px;
@@ -157,9 +168,9 @@
                 position: absolute;
                 top: 240px;
                 transform: rotate(-45deg);
-                border-left: 4px solid #24ba9f;
-                border-top: 4px solid #24ba9f;
-                left: 25px;
+                border-left: 4.5px solid #24ba9f;
+                border-top: 4.5px solid #24ba9f;
+                left: 50px;
                 cursor: pointer;
             }
 
@@ -216,10 +227,10 @@
 
             }
 
-            .slider-box-text:after {
+            .arrow-right {
                 content: "";
-                width: 48.5px;
-                height: 48.5px;
+                width: 40px;
+                height: 40px;
                 position: absolute;
                 right: 50px;
                 top: 240px;
@@ -250,6 +261,7 @@
                 display: flex;
                 align-items: flex-end;
                 min-width: 250px;
+                cursor: pointer;
 
                 .product-text {
                     background: rgba(255, 255, 255, 0.5);
@@ -279,18 +291,27 @@
                 display: flex;
                 align-items: flex-end;
                 min-width: 250px;
-
-
+                cursor: pointer;
             }
 
             .product-container-3 {
                 @include imageDetails(30%, 228px);
                 border: 0.5px solid lightgrey;
                 min-width: 250px;
+                cursor: pointer;
+
+                .product-text {
+                    .product-text-name {
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
 
                 .product-text-about {
                     display: inline-block;
-                    margin-left: 10px
+                    margin-left: 10px;
+                    text-decoration: none;
+                    color: black;
                 }
             }
 
@@ -346,6 +367,7 @@
             margin-bottom: 20px;
             flex-direction: row;
             justify-content: space-around;
+            padding-bottom: 10px;
 
             .price-type-1 {
                 width: 26%;
@@ -495,7 +517,7 @@
                     margin: 20px;
                     padding: 20px;
                     font-size: 26px;
-                    color: lightgray;
+                    color: black;
                     border: 1px solid #24ba9f;
                 }
 
